@@ -5,4 +5,4 @@ build:
 	go build -ldflags "$(LDFLAGS)" .
 
 image:
-	docker build -t heliostech/go-web-app:$(TAG) .
+	docker build --build-arg VERSION=$(TAG) -t heliostech/go-web-app:$(TAG) .
